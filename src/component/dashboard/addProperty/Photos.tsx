@@ -127,7 +127,7 @@ const Photos = ({ handleReduceStep }: IProperty) => {
           btnType="submit"
           btnText="log data"
           disabled={!isValid}
-          className="capitalize bg-klooft-red w-335 h-50 tracking-05 text-white text-base font-Gilroy-semibold rounded-lg"
+          className="capitalize bg-klooft-red w-335 h-50 tracking-05 text-white text-base font-Gilroy-semibold rounded-lg disabled:opacity-75"
         />
       </div>
     </div>
