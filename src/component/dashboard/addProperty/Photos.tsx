@@ -45,7 +45,7 @@ const Photos = ({ handleReduceStep }: IProperty) => {
           disabled={values.photos.length === 5}
         >
           {({ getRootProps, getInputProps }) => (
-            <section className="mt-8 relative mx-auto w-370 h-133 rounded-lg flex justify-center items-center border-2 border-dashed border-grey-4 box-border">
+            <section className="mt-8 relative mx-auto w-370 h-133 rounded-lg flex justify-center items-center border border-dashed border-klooft-grey box-border cursor-pointer">
               <div
                 {...getRootProps()}
                 className="flex flex-col items-center gap-y-27"
@@ -63,55 +63,55 @@ const Photos = ({ handleReduceStep }: IProperty) => {
             </section>
           )}
         </Dropzone>
-        <div className="flex items-center gap-x-6">
-          <div className="w-185 h-107 rounded-lg">
+        <div className="flex items-center justify-center gap-x-6">
+          <div className={`${!values.photos[0] && 'border-dashed border border-klooft-grey'} w-185 h-107 rounded-lg`}>
             <img
               src={
                 (values.photos[0] &&
                   URL.createObjectURL(values.photos[0]!)) as string
               }
               alt=""
-              className="rounded-lg w-full h-full object-cover"
+              className={`${values.photos[0] && 'rounded-lg w-full h-full'} object-cover border-none`}
             />
           </div>
-          <div className="w-185 h-107 rounded-lg">
+          <div className={`${!values.photos[1] && 'border-dashed border border-klooft-grey'} w-185 h-107 rounded-lg`}>
             <img
               src={
                 (values.photos[1] &&
                   URL.createObjectURL(values.photos[1]!)) as string
               }
               alt=""
-              className="rounded-lg w-full h-full object-cover"
+              className={`${values.photos[1] && 'rounded-lg w-full h-full'} object-cover border-none`}
             />
           </div>
-          <div className="w-185 h-107 rounded-lg">
+          <div className={`${!values.photos[2] && 'border-dashed border border-klooft-grey'} w-185 h-107 rounded-lg`}>
             <img
               src={
                 (values.photos[2] &&
                   URL.createObjectURL(values.photos[2]!)) as string
               }
               alt=""
-              className="rounded-lg w-full h-full object-cover"
+              className={`${values.photos[2] && 'rounded-lg w-full h-full'} object-cover border-none`}
             />
           </div>
-          <div className="w-185 h-107 rounded-lg">
+          <div className={`${!values.photos[3] && 'border-dashed border border-klooft-grey'} w-185 h-107 rounded-lg`}>
             <img
               src={
                 (values.photos[3] &&
                   URL.createObjectURL(values.photos[3]!)) as string
               }
               alt=""
-              className="rounded-lg w-full h-full object-cover"
+              className={`${values.photos[3] && 'rounded-lg w-full h-full'} object-cover border-none`}
             />
           </div>
-          <div className="w-185 h-107 rounded-lg">
+          <div className={`${!values.photos[4] && 'border-dashed border border-klooft-grey'} w-185 h-107 rounded-lg`}>
             <img
               src={
                 (values.photos[4] &&
                   URL.createObjectURL(values.photos[4]!)) as string
               }
               alt=""
-              className="rounded-lg w-full h-full object-cover"
+              className={`${values.photos[4] && 'rounded-lg w-full h-full'} object-cover border-none`}
             />
           </div>
         </div>

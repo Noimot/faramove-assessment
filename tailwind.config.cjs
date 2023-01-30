@@ -34,7 +34,6 @@ module.exports = {
         "klooft-grey-2": "#D3D3D3",
         "klooft-black": "#292929",
         "grey-3": "#797979",
-        "grey-4": "#A5B0B7",
         "black-1": "#383838",
         "red-1": "#EF1313",
         "black-2": "#101010",
