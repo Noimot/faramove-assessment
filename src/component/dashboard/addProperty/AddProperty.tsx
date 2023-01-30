@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { IAddProperty } from "../../../utils/interfaces/property-details";
 import PropertyDetails from "./PropertyDetails";
 import AddressDetails from "./AddressDetails";
-import Photos from "./photos";
+import Photos from "./Photos";
 
 const AddPropertyForm = () => {
   const [step, setStep] = useState<number>(1);
