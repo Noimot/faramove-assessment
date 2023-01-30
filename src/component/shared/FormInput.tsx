@@ -24,7 +24,7 @@ const FormInput = ({ name, label, required, placeholder, ...rest }: IFormInput) 
       <div className="h-12 border border-solid border-klooft-grey rounded-lg px-4">
         <input
           placeholder={placeholder}
-          className="w-full h-full capitalize border-0 outline-0 text-xs text-klooft-grey text-Gilroy-regular"
+          className="w-full h-full capitalize border-0 outline-0 text-xs text-gray-500 text-Gilroy-regular"
           {...field}
           {...rest}
         />

@@ -4,12 +4,22 @@ import { useFormikContext } from "formik";
 
 const Amenities = () => {
   const { values, setFieldValue }: any = useFormikContext();
+  const handleSelectAmenity = (amenity: IData) => {
+    if (!values.amenities.includes(amenity.name)) {
+      return [...values.amenities, amenity.name];
+    } else {
+      return values.amenities.filter((val: string) => {
+        return val !== amenity.name;
+      })
+    }
+   
+  };
   return (
     <div className="px-63 py-5">
       <h2 className="text-black-1 tracking-widest font-Gilroy-bold text-32 capitalize">
         Amenities{" "}
         <span>
-          ({values.amenities.length} /{data.length})
+          ({values?.amenities?.length} /{data?.length})
         </span>
       </h2>
       <p className="text-grey-3 font-Gilroy-semibold text-base py-9">
@@ -17,16 +27,16 @@ const Amenities = () => {
         <span className="text-klooft-red">*</span>
       </p>
       <div className="flex items-center gap-x-5">
-        {data.map((amenities, index) => (
+        {data.map((amenities: IData) => (
           <div
             key={amenities.id}
             className={`${
-              values.amenities[index]
+              values?.amenities?.includes(amenities.name)
                 ? "border-[1.5px] border-green-1"
                 : "border-[0.5px] border-grey-3"
-            } w-133 h-82 rounded-10 border-solid flex flex-col items-center justify-center capitalize gap-y-3`}
+            } w-133 h-82 rounded-10 border-solid flex flex-col items-center justify-center capitalize gap-y-3 hover:cursor-pointer`}
             onClick={() =>
-              setFieldValue("amenities", [...values.amenities, amenities.name])
+              setFieldValue("amenities", handleSelectAmenity(amenities))
             }
           >
             <img src={amenities.icon} alt="" />

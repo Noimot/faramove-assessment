@@ -36,7 +36,7 @@ const AddressDetails = ({ handleReduceStep, handleIncreaseStep }: IProperty) => 
           <FormInput
             label="Appointment Number"
             name="appointmentNumber"
-            placeholder="1"
+            // placeholder="1"
           />
         </div>
       </div>

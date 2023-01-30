@@ -29,7 +29,7 @@ const FormSelect = ({
       </label>
       <div className="h-12 border border-solid border-klooft-grey rounded-lg px-4">
         <select
-          className="w-full h-full capitalize border-0 outline-0 text-xs text-klooft-grey font-Gilroy-regular"
+          className="w-full h-full capitalize border-0 outline-0 text-xs text-gray-500 font-Gilroy-regular"
           {...field}
           {...rest}
         />
